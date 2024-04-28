@@ -1,0 +1,61 @@
+Program  		Predicates Clauses Goal
+
+for predicates section:
+
+Predicates	 	predicates  Pstatement
+
+Pstatement 		Definition Pstatement | Definition
+
+Definition 		pred_name(Paramters) | pred_name
+
+Paramters		Datatypes, Paramters | Datatypes
+
+
+for clause sections:
+
+Clause			clauses  Cstatements
+
+Cstatements		Cstatement Cstatements | Cstatement
+
+
+Cstatement 		Fact. | Rule.
+
+Fact			pred_name(Fparamters) 	| pred_name				
+
+Fparamters		value, Fparamters | value
+
+
+Rule 			Head :- Body 
+
+Head			pred_name(Fparamters) | pred_name
+
+Body			Bstatement, Body | Bstatement; Body | Bstatement
+
+Bstatement 		Input(var_name) | write(String) | Variable
+
+String  		string, String | string | var_name
+
+Variable  		var_name Op Variable | var_name
+
+OP  			Rlop | Arop
+
+Goal			goal	Gstatement.
+
+
+Datatypes		integer | symbol | char | string | real 
+
+Input 			readln | readint | readchar 
+
+
+Rlop  			 < | <= | > | >= | = | <>
+
+Arop    		 + | - |* | /
+
+for goal Section:
+
+Gstatement		pred_name(Gparamters) | pred_name
+
+Gparamters		Fparamters | var_name, Gparamters | var_name
+
+
+
